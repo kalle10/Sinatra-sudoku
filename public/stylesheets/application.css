@@ -7,6 +7,7 @@ div.box, div.cell {
   height: 50px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px #999;
+  margin: 1px;
 }
 .cell input {
   padding: 5px 10px;
@@ -25,10 +26,19 @@ background: #690;
 body {
   text-align: center;
   font-family: Arial;
-  font-color: red;
+  color: white;
 
 }
 
-/*html {
+html {
 	background: black;
-}*/
+}
+
+.incorrect {
+  background-color: yellow;
+}
+
+.value-provided {
+  background-color: #DDD;
+}
+
