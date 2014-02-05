@@ -19,9 +19,16 @@ background: #690;
 #sudoku {
   font-size: 0;
    text-align: center;
+
 }
 
 body {
   text-align: center;
   font-family: Arial;
+  font-color: red;
+
 }
+
+/*html {
+	background: black;
+}*/
