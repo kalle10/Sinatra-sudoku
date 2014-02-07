@@ -10,44 +10,44 @@
       <div id='main_header'>
         <h1>Sudoku sucks!</h1>
       </div>
-        <div class='sidebar'>
-          <button><a href='/button'>New puzzle!</a></button>
-          <button><a href='/hard'>Hard Sudoku</a></button>
-          <button><a href='/solution'>Solution</a></button>
-        </div>
-        <div class="sidebar_left">
-          <h3>Get a Life</h3>
-            <p class="paragraph">....and leave this page</p>
+      <div class='sidebar'>
+        <button><a href='/button'>New puzzle!</a></button>
+        <button><a href='/hard'>Hard Sudoku</a></button>
+        <button><a href='/solution'>Solution</a></button>
+      </div>
+      <div class="sidebar_left">
+        <h3>Get a Life</h3>
+        <p class="paragraph">....and leave this page</p>
+      </div>
+      <form action="/" method="post">  
+        <div id="sudoku">
+          <% 3.times do |row| %>
+            <div class='row'>
+              <% 3.times do |box| %>
+                <div class="box">
+                  <% 3.times do |cell_row| %>
+                    <div class="cell-row">
+                      <% 3.times do |cell| %>
+                        <div class="cell">
+                          <%= partial :cell, :locals => {:cell_index => row * 27 + box * 3 + cell_row * 9 + cell} %>
+                        </div>
+                      <% end %>
+                    </div>                  
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
         <div id="flash">
           <%= flash[:notice] %>
         </div>
-        <div id="sudoku">
-          <form action="/" method="post">  
-            <% 3.times do |row| %>
-              <div class='row'>
-                <% 3.times do |box| %>
-                  <div class="box">
-                    <% 3.times do |cell_row| %>
-                      <div class="cell-row">
-                        <% 3.times do |cell| %>
-                          <div class="cell">
-                            <%= partial :cell, :locals => {:cell_index => row * 27 + box * 3 + cell_row * 9 + cell} %>
-                          </div>
-                        <% end %>
-                      </div>
-                    <% end %>
-                  </div>
-                <% end %>
-              </div>
-            <% end %>
-            <button>Check solution</button>
-          </form>
-        </div>
-      </div>
+        <button>Check solution</button>
+      </form>      
     </div>
-    <div id="footer">
-      <%=::NewRelic::Agent.browser_timing_footer rescue "" %>
-    </div>
-  </body>
+  </div>
+  <div id="footer">
+    <%=::NewRelic::Agent.browser_timing_footer rescue "" %>
+  </div>
+</body>
 </html>

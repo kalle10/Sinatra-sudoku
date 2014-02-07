@@ -2,14 +2,12 @@ div.box, div.cell {
   display: inline-block;
 }
 
-.cell input {
-  width: 50px;
-  height: 50px;
+input {
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   box-shadow: 1px 1px 2px #999;
   margin: 1px;
-}
-.cell input {
   padding: 5px 10px;
   background: #9c3;
 }
@@ -40,8 +38,8 @@ button {
   font-size: 18px;
   padding: 10px;
   margin-top: 30px;
-  background-color: #fef7de;
-  border-color: rgb(28, 36, 33);
+  background-color: #DC143C;
+  border-color: rgb(110, 33, 33);
   box-shadow: 3px 3px 3px;
 }
 
@@ -51,28 +49,31 @@ div.sidebar button {
   font-size: 18px;
   padding: 10px;
   margin-right: 30px;
-  background-color: #fef7de;
-  border-color: rgb(28, 36, 33);
+  background-color: #DC143C;
+  border-color: rgb(110, 33, 33);
   box-shadow: 3px 3px 3px;
 }
 
-#wrapper {
-  width: 100%;
+.cell input:focus {
+  background-color: #FFA500;
 }
 
+
 .incorrect {
-  background-color: black;
+  background: salmon;
 }
 
 .value-provided {
-  background-color: #DDD;
+  background-color: #9c3;
 }
 
 #flash {
-  margin: 70px;
+  z-index: 300;
+  margin: 10px;
+  font-size: 30px
+  color: salmon;
 }
 
-a:link, a:visited {
-  text-decoration: none;
-  color: rgb(28, 36, 33);
-  }
+
+
+
